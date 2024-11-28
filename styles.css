@@ -1,0 +1,195 @@
+/* Imagem de fundo no body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/CONSULTORIA.png');
+    /* Caminho da imagem */
+    background-size: 90%;
+    /* Reduz o tamanho da imagem */
+    background-repeat: no-repeat;
+    /* Evita repetir a imagem */
+    background-position: center top;
+    /* Centraliza no topo */
+    background-attachment: fixed;
+    /* Mantém a imagem fixa */
+    color: #fff;
+    /* Texto branco para contraste */
+}
+
+/* Adicionando um filtro de cor sobre o fundo */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* Transparência mais leve */
+    z-index: -1;
+    /* Garante que o conteúdo fique acima */
+}
+
+/* Cabeçalho */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    /* Fundo levemente escuro */
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1.6s ease-in;
+}
+
+/* Divs principais */
+div {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Lista de serviços */
+.servicos-lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.servico-item {
+    background: #28a745;
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: 80%;
+    text-align: left;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+/* Efeito ao passar o mouse nos itens */
+.servico-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão com animação ao passar o mouse */
+a.btn {
+    display: inline-block;
+    background: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.4s, transform 0.4s;
+}
+
+a.btn:hover {
+    background: #218838;
+    transform: translateY(-3px);
+}
+
+/* Rodapé */
+/* Rodapé */
+footer {
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Container do rodapé */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Permite ajuste em telas menores */
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo das seções */
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+/* Links sociais no centro */
+.footer-center {
+    text-align: center;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #28a745;
+}
+
+/* Detalhes de contato */
+.footer-left p,
+.footer-right p {
+    margin: 0.2rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer-left i,
+.footer-right i {
+    color: #28a745;
+    margin-right: 5px;
+}
+
+/* Texto no centro */
+.footer-bottom {
+    text-align: center;
+    font-size: 0.8rem;
+    border-top: 1px solid #444;
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+}
